@@ -18,3 +18,8 @@ body{
   color: #fff;
   /* overflow: hidden; */
 }
+
+img,svg{
+  display: block;
+  max-width: 100%;
+}
