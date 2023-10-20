@@ -9,6 +9,7 @@ import Section from './Components/Section/Section';
 function App() {
   const [topalbum, setTobalbum] = useState([]);
   const [newalbum, setNewalbum] = useState([]);
+  // const [songs, setSongs] = useState([]);
 
   const generateTobalbum = async () => {
     const data = await featchTopAlbum();
@@ -18,6 +19,10 @@ function App() {
     const data1 = await featchNewAlbum();
     setNewalbum(data1);
   }
+  // const generateSongs = async () => {
+  //   const data2 = await featchSongs();
+  //   setSongs(data2);
+  // }
   useEffect(()=>{
     generateTobalbum();
     generateNewalbum();
@@ -28,7 +33,7 @@ function App() {
       <Hero /> 
       <Section data={topalbum} title="Top Albums" type="album" />
       <Section data={newalbum} title="New Albums" type="album" />
-           
+      {/* <Section data={songs} title="Songs" type="album" />     */}
     </div>
   );
 }

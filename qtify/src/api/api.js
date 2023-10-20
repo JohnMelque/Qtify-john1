@@ -13,6 +13,16 @@ export const featchNewAlbum = async () => {
   }
 }
 
+// export const featchSongs = async () => {
+//   try {
+//     const res = await axios.get(`${BACKEND_POINT}/albums/new`);
+  
+//     return res.data;
+    
+//   } catch(e) {
+//     console.error(e)
+//   }
+// }
 
 
 export const featchTopAlbum = async () => {

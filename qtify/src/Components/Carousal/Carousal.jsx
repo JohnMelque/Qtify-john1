@@ -11,7 +11,7 @@ const Controls = ({ data }) => {
 
   useEffect(() => {
     swiper.slideTo(0,null);
-  }, [data]);
+  },);
   return <></>
 }
 
@@ -26,7 +26,7 @@ const Carousal = ({data,reactComponent}) => {
         allowTouchMove >
         <Controls data={data} />
         <Carousalright />
-        <Carousalleft/>
+        <Carousalleft/> 
         {
           data.map(item => (
             <SwiperSlide>{reactComponent(item)}</SwiperSlide>

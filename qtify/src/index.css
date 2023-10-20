@@ -1,8 +1,4 @@
-:root{
-  --color-primary:#34c94b
-  --color-black:#121212
-  --color-white:#fff
-}
+
 *,*::before,*::after{
   box-sizing: border-box;
 }
@@ -16,7 +12,6 @@ body{
   background-color: #121212;
   font-family: "Poppins",sans-serif;
   color: #fff;
-  /* overflow: hidden; */
 }
 
 img,svg{
