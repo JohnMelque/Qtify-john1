@@ -1,0 +1,19 @@
+.wrapper{
+  position: relative;
+}   
+
+.leftNavi{
+  position: absolute;
+  left:0px;
+  top: 80px;
+  transform: translateY(-50%);
+  z-index :10;
+     
+}
+.rightNavi{
+  position: absolute;
+  right:10px;
+  top: 80px;
+  transform: translateY(-50%);
+  z-index :10;
+}

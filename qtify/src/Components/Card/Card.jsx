@@ -1,11 +1,8 @@
 import React from 'react'
 import styles from './Card.module.css'
 import { Chip, Tooltip } from '@mui/material';
-
-
-
-
 const Card = ({ data, type }) => {
+ 
 
   const getCard =(type) => {
     switch (type) {
@@ -35,4 +32,4 @@ const Card = ({ data, type }) => {
   )
 }
 
-export default Card
+export default Card;
