@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.3213c5b1.css",
-    "main.js": "/static/js/main.cc37ffb8.js",
+    "main.js": "/static/js/main.68df2469.js",
     "static/js/787.6510a649.chunk.js": "/static/js/787.6510a649.chunk.js",
     "static/media/vibrating-headphone 1.png": "/static/media/vibrating-headphone 1.064f07ccb05867b51829.png",
     "index.html": "/index.html",
     "static/media/search-icon.svg": "/static/media/search-icon.ef0e89d77d3f7328091a13db57420232.svg",
-    "static/media/right.svg": "/static/media/right.a6df7267b849a9614cec8af502c31473.svg",
-    "static/media/left.svg": "/static/media/left.5781bceed04d06d298a7762c22c64a5d.svg",
+    "static/media/right.svg": "/static/media/right.493bc99e5d27619b258049136301defe.svg",
+    "static/media/left.svg": "/static/media/left.349fab4a37522765d67ded09d6524e46.svg",
     "main.3213c5b1.css.map": "/static/css/main.3213c5b1.css.map",
-    "main.cc37ffb8.js.map": "/static/js/main.cc37ffb8.js.map",
+    "main.68df2469.js.map": "/static/js/main.68df2469.js.map",
     "787.6510a649.chunk.js.map": "/static/js/787.6510a649.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3213c5b1.css",
-    "static/js/main.cc37ffb8.js"
+    "static/js/main.68df2469.js"
   ]
 }

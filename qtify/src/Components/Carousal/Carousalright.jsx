@@ -10,7 +10,7 @@ const Carousalright = () => {
     swiper.on("slideChange", function () {
       setIsEnd(swiper.isEnd);
     })
-  },[])
+  },[isEnd,swiper,swiper.isEnd])
   return (
     <div className={styles.rightNavi}>
       {!isEnd && <RightArrow onClick={()=>swiper.slideNext()}/>}
