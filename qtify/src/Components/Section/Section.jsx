@@ -1,46 +1,44 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState ,useCallback} from "react";
 import "./Section.css";
 import { CircularProgress } from "@mui/material";
 import Carousel from "../Carousel/Carsousel";
 import Card from "../Card/Card";
 
 const Section = ({ title, data, type, genres }) => {
-  const [carouselToggle, setCauroselToggle] = useState(true);
-  const [filteredSongsData, setFilteredSongsData] = useState([]);
-  const [isSelected, setIsSelected] = useState("all");
-
-  useEffect(() => {
-    handlefilterSongs();
-  }, [data]);
-
-  useEffect(() => {
-    handlefilterSongs();
-  }, [isSelected]);
-
-  const handleToggle = () => {
-    setCauroselToggle(!carouselToggle);
-  };
-
-  const handlefilterSongs = () => {
-    console.log(isSelected);
-    if (type === "song") {
-      if (isSelected === "all") {
-        setFilteredSongsData(data);
+    const [carouselToggle, setCarouselToggle] = useState(true);
+    const [filteredSongsData, setFilteredSongsData] = useState([]);
+    const [isSelected, setIsSelected] = useState("all");
+  
+    const handlefilterSongs = useCallback(() => {
+      console.log(isSelected);
+      if (type === "song") {
+        if (isSelected === "all") {
+          setFilteredSongsData(data);
+        } else {
+          const filteredData = data.filter(
+            (item) => item.genre.key === isSelected
+          );
+          setFilteredSongsData(filteredData);
+        }
       } else {
-        const filteredData = data.filter(
-          (item) => item.genre.key === isSelected
-        );
-        setFilteredSongsData(filteredData);
+        setFilteredSongsData(data);
       }
-    } else {
-      setFilteredSongsData(data);
-    }
-  };
+    }, [data, isSelected, type]);
+  
+    useEffect(() => {
+      handlefilterSongs();
+    }, [data, isSelected, handlefilterSongs]);
+  
+    const handleToggle = () => {
+      setCarouselToggle(!carouselToggle);
+    };
+  
+    const selectGenre = (key) => {
+      setIsSelected(key);
+      handlefilterSongs();
+    };
 
-  const selectGenre = (key) => {
-    setIsSelected(key);
-    handlefilterSongs();
-  };
+  
 
   return (
     <div className={`${type === "song" ? "songsBorder" : ""}`}>
